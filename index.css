@@ -1,0 +1,111 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --primary-colour: #00FFFF;
+    --secondary-colour: white;
+    --tertiary-colour: black;
+    --font-size-lg: 70px;
+    --font-size-m: 30px;
+    --font-size-sm: 20px;
+    --font-size-s: 15px;
+    --font-size-sl: 10px;
+}
+
+body {
+    background: var(--tertiary-colour);
+    margin-top: 200px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    border-radius: 30px;
+    border: 5px dotted var(--primary-colour);
+    margin: 50px;
+    padding-bottom: 50px;
+    animation: 5s eno infinite;
+}
+@keyframes eno {
+    0%{
+         border: 5px dotted var(--primary-colour);
+    }
+    25%{
+         border: 5px solid var(--secondary-colour);
+    }
+     75%{
+         border: 5px dotted var(--secondary-colour);
+    }
+    100%{
+         border: 5px solid var(--primary-colour);
+    }
+}
+
+.div-01 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#word-1 {
+    color: var(--primary-colour);
+    font-size: var(--font-size-lg);
+}
+
+#word-2 {
+    color: var(--primary-colour);
+    font-size: var(--font-size-sm);
+}
+
+#word-3 {
+    color: var(--secondary-colour);
+    font-size: var(--font-size-m);
+    font-style: oblique;
+}
+
+#pa-1 {
+    color: var(--tertiary-colour);
+    background: var(--secondary-colour);
+    border-radius: 20px 50px;
+    padding: 10px 40px;
+     animation: 10s eno infinite;
+}
+
+#pa-2 {
+    color: var(--tertiary-colour);
+    background: var(--primary-colour);
+    margin-left: 20px;
+    padding: 10px 40px;
+    border-radius: 20px 50px;
+     animation: 10s eno infinite;
+}
+@media only screen and (max-width:600px){
+    #word-3 {
+    font-size: var(--font-size-s);
+}
+}
+@media only screen and (max-width:438px){
+   .container{
+     margin: 20px;
+   }
+}
+@media only screen and (max-width:369px){
+   #word-2 {
+    font-size: var(--font-size-s);
+}
+#pa-1 {
+    padding: 10px 20px;
+}
+#pa-2 {
+    padding: 10px 20px;
+}
+}
